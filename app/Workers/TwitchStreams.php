@@ -31,7 +31,7 @@ class TwitchStreams
                         'service_name' => 'twitch',
                     ];
 
-                    streams_model()->newQuery()->firstOrCreate($params);
+                    streams_model()->newQuery()->updateOrCreate($params);
                 }
             }
         }
